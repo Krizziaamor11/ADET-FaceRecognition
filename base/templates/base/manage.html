@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container mt-10">
+    <div class="row pt-3">
+       
+      
+        <div class="col-sm-10 mt-5">
+            <h2>My Students</h2>           
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>status</th>
+                        <th>Moboile #</th>
+                        <th>Action View</th>
+                        <th>Action Edit</th>
+                        <th>Action Delete</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Bane</td>
+                            <td>Rem</td>
+                            <td>Single</td>
+                            <td>143</td>
+                            <td><a href=""><h5><span class="badge bg-info">View</span></h5></a></td>
+                            <td><a href=""><h5><span class="badge bg-success">Edit</span></h5></a></td>
+                            <td><a href=""><h5><span class="badge bg-danger">Delete</span></h5></a></td>
+                        </tr>
+                        
+                         
+
+                    </tbody>
+                </table>
+        </div>
+        <div class="col-sm-2">
+            
+        </div>
+    </div>
+</div>
+{% endblock content %}
