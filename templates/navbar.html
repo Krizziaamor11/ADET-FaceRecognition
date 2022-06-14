@@ -32,7 +32,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{ request.user.username }}</a>
             <ul class="dropdown-menu">
              <li><a class="dropdown-item" href="#">My information</a></li>
-             <!-- <li><a class="dropdown-item" href="{% url 'mystudents' %}">My Student</a></li> -->
+             <li><a class="dropdown-item" href="{% url 'mystudents' %}">My Student</a></li>
              <!-- <li><a class="dropdown-item" href="#">Edit</a></li> -->
              <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
             </ul>
