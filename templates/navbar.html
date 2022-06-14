@@ -17,7 +17,10 @@
         {% if request.user.is_authenticated %}
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'records' %}">HOME</a>
+            <a class="nav-link" href="{% url 'dashboard' %}">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'records' %}">RECORDS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'manage' %}">TEACHERS</a>
@@ -26,10 +29,10 @@
             <a class="nav-link" href="{% url 'manage' %}">ADMIN PAGE</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Account</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{ request.user.username }}</a>
             <ul class="dropdown-menu">
              <li><a class="dropdown-item" href="#">My information</a></li>
-             <li><a class="dropdown-item" href="{% url 'mystudents' %}">My Student</a></li>
+             <!-- <li><a class="dropdown-item" href="{% url 'mystudents' %}">My Student</a></li> -->
              <!-- <li><a class="dropdown-item" href="#">Edit</a></li> -->
              <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
             </ul>

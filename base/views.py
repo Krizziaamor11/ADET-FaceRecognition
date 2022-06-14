@@ -100,4 +100,9 @@ def managerec(request):
     context={}
     return render(request,"base/manage.html",context)
 
+def dashboard(request):
+
+    context={}
+    return render(request,"base/dashboard.html",context)
+
     

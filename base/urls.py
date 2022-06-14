@@ -11,5 +11,6 @@ urlpatterns = [
     path('mystudent/', views.mystudent,name="mystudents"),
     path('manage/', views.managerec,name="manage"),
     path('student/add/', views.addstudent,name="addstudent"),
+    path('dashboard/', views.dashboard,name="dashboard"),
     
 ]

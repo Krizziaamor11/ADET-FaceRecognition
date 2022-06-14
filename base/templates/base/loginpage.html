@@ -1,28 +1,21 @@
 {% extends 'main.html' %}
-
-{% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
-
-
 {% block content %}
-<div class="container mt-10">
-    <div class="row pt-3">
-        <div class="col-sm-6 ">
-            <form action="" method="POST">
+<section class="container">
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="POST">
                 {% csrf_token %}
+                <h2 class="text-center"><strong>Welcome back!</strong></h2>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="email" placeholder="Username" name="username">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                </div>
+
                 <div class="mb-3 mt-3">
-                    <h1 class="test">Login</h1>
-                </div>
-                <div class="mb-3 mt-3">
-                <!-- <label for="email" class="form-label">Username:</label> -->
-                <input type="text" class="form-control" id="email" placeholder="Username" name="username">
-                </div>
-                <div class="mb-3">
-                <!-- <label for="pwd" class="form-label">Password:</label> -->
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
-                </div>
-                <div class="mb-3">
                     {% if messages %}
                     <ul class="messages " style="padding-left: 0px !important">
                         <div class="alert alert-danger">
@@ -34,14 +27,16 @@
                     {% endif %}
                 </div>
                 
-                <button type="submit" class="btn btn-secondary">Submit</button>
-                <a href="{% url 'registerpage' %}">No account? Sign Up Here</a>
-                <button type="button" class="btn btn-link">No account? Sign Up Here</button>
-                </form>
-        </div>
-        <div class="col-sm-6">
-            
+                <div class="d-grid mx-auto">
+                    <button class="btn btn-success btn-block btn-info" type="submit" style="color: white;">Login</button>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <a href="{% url 'registerpage' %}" style="color: black;text-decoration: none;">No account? <b>Sign Up Here</b></a>
+                </div>
+        
+            </form>
         </div>
     </div>
-</div>
+</section>
 {% endblock content %}
